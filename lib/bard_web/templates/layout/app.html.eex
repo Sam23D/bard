@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>🎼 Bard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+  </head>
+  <body class="bg-sepia-lighter h-screen">
+    <div class="flex h-full">
+      <div class="flex flex-col justify-center items-center min-w-16 flex-1 bg-sepia-light text-white">
+        lateral
+      </div>    
+      <div class="flex flex-col overflow-y-scroll text-justify py-8 px-12 bg-sepia-lightest">
+        <%= render @view_module, @view_template, assigns %>
+      </div>    
+    </div>    
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

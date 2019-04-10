@@ -12,8 +12,13 @@
     <div class="flex h-full">
       <div class="flex flex-col justify-center items-center min-w-16 flex-1 bg-sepia-light text-white">
         lateral
+        <div>
+          <%= for page <- list_pages do %>
+            <a href="#"><%= page %></a>
+          <% end %>
+        </div>
       </div>    
-      <div class="flex flex-col overflow-y-scroll text-justify py-8 px-12 bg-sepia-lightest">
+      <div class="flex flex-col overflow-y-scroll text-justify py-8 px-16 bg-sepia-lightest">
         <%= render @view_module, @view_template, assigns %>
       </div>    
     </div>    
